@@ -8,7 +8,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/Button";
 import { WaveDivider } from "@/components/ui/WaveDivider";
 import { generateWhatsAppUrl, generateQuoteMessage } from "@/lib/whatsapp";
-import { siteConfig } from "@/config/site";
+import { siteConfig, backgroundImages } from "@/config/site";
 
 const SendIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg {...props} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -77,6 +77,9 @@ export function Quote() {
 
   return (
     <section id="quote" className="bg-midnight relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23C96A40%22 fill-opacity=%220.03%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+      
       <div className="absolute inset-0 bg-gradient-to-br from-midnight via-midnight to-obsidian" />
       
       <WaveDivider className="absolute top-0 left-0 right-0" />
@@ -107,7 +110,7 @@ export function Quote() {
               href={generateWhatsAppUrl(siteConfig.whatsapp, "Hi Raylink, I'd like to discuss a project...")}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp inline-flex items-center gap-3 mt-8"
+              className="btn-whatsapp inline-flex items-center gap-3 mt-8 w-full sm:w-auto touch-target-lg"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -140,7 +143,7 @@ export function Quote() {
                   <Button 
                     variant="ghost" 
                     onClick={() => setSubmitStatus("idle")}
-                    className="w-full"
+                    className="w-full touch-target-lg"
                   >
                     Send Another Request
                   </Button>
@@ -164,7 +167,7 @@ export function Quote() {
                         id="name"
                         type="text"
                         placeholder="John Doe"
-                        className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-3 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all"
+                        className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-4 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all touch-target"
                         aria-invalid={errors.name ? "true" : "false"}
                       />
                       {errors.name && (
@@ -181,7 +184,7 @@ export function Quote() {
                         id="phone"
                         type="tel"
                         placeholder="+254 7XX XXX XXX"
-                        className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-3 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all"
+                        className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-4 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all touch-target"
                         aria-invalid={errors.phone ? "true" : "false"}
                       />
                       {errors.phone && (
@@ -199,7 +202,7 @@ export function Quote() {
                       id="service"
                       type="text"
                       placeholder="e.g., Vehicle wrap for 5 vans"
-                      className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-3 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all"
+                      className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-4 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all touch-target"
                       aria-invalid={errors.service ? "true" : "false"}
                     />
                     {errors.service && (
@@ -216,7 +219,7 @@ export function Quote() {
                       id="quantity"
                       type="text"
                       placeholder="e.g., 5 units, 3x2m, 500 pcs"
-                      className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-3 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all"
+                      className="w-full bg-midnight/50 border border-border/30 rounded-lg px-4 py-4 text-linen placeholder-linen/30 focus:outline-none focus:ring-2 focus:ring-copper focus:border-transparent transition-all touch-target"
                       aria-invalid={errors.quantity ? "true" : "false"}
                     />
                     {errors.quantity && (
@@ -227,7 +230,7 @@ export function Quote() {
                   <Button 
                     type="submit" 
                     isLoading={submitStatus === "submitting"}
-                    className="w-full"
+                    className="w-full touch-target-lg"
                     aria-busy={submitStatus === "submitting"}
                   >
                     <SendIcon className="w-5 h-5 mr-2" />

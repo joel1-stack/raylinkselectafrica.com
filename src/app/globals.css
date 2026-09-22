@@ -41,10 +41,24 @@
   .animate-delay-300 { animation-delay: 300ms; }
   .animate-delay-400 { animation-delay: 400ms; }
   .animate-delay-500 { animation-delay: 500ms; }
+  
+  /* Mobile-first touch targets */
+  .touch-target { @apply min-h-[44px] min-w-[44px] flex items-center justify-center; }
+  .touch-target-lg { @apply min-h-[48px] min-w-[48px] flex items-center justify-center; }
+  
+  /* Prevent horizontal scroll */
+  .no-scroll-x { overflow-x: hidden; }
+  
+  /* Smooth tap highlights on mobile */
+  .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+  
+  /* Better text rendering */
+  .text-rendering-optimize { text-rendering: optimizeLegibility; }
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -53,6 +67,35 @@ body {
   color: var(--color-anthracite);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Mobile viewport fixes */
+@media (max-width: 640px) {
+  .section-container {
+    @apply px-4;
+  }
+  
+  .headline {
+    @apply text-3xl leading-tight;
+  }
+  
+  .subtext {
+    @apply text-base;
+  }
+  
+  .eyebrow {
+    @apply text-xs;
+  }
+  
+  /* Stack buttons on mobile */
+  .mobile-stack {
+    @apply flex-col gap-3 w-full;
+  }
+  
+  .mobile-stack > * {
+    @apply w-full;
+  }
 }
 
 .font-serif {

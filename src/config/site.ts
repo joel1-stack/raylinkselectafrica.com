@@ -48,9 +48,19 @@ export const portfolioItems = [
     category: "VEHICLE BRANDING",
   },
   {
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    alt: "Modern office wall branding and graphics",
-    category: "OFFICE BRANDING",
+    src: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
+    alt: "Branded t-shirts and apparel merchandise",
+    category: "APPAREL & MERCHANDISE",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=800&q=80",
+    alt: "Custom branded mugs and ceramic cups",
+    category: "BRANDED DRINKWARE",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1586363104862-3a5e2a5b7a7c?w=800&q=80",
+    alt: "Branded caps and embroidered hats",
+    category: "HEADWEAR & CAPS",
   },
   {
     src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
@@ -58,6 +68,14 @@ export const portfolioItems = [
     category: "EVENT & APPAREL",
   },
 ];
+
+export const backgroundImages = {
+  hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+  quote: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
+  footer: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80",
+};
+
+export const heroImage = "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80";
 
 export const solutions = [
   {
@@ -85,5 +103,3 @@ export const solutions = [
     desc: "Business cards, brochures, product boxes, labels, stationery.",
   },
 ];
-
-export const heroImage = "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80";
