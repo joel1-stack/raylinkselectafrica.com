@@ -1,0 +1,54 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111111"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C96A40"/>
+      <stop offset="50%" style="stop-color:#D4A574"/>
+      <stop offset="100%" style="stop-color:#C96A40"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <!-- Reception desk base -->
+  <rect x="150" y="500" width="900" height="120" rx="10" fill="#1A1A1A" stroke="#C96A40" stroke-width="2"/>
+  <rect x="170" y="510" width="860" height="100" rx="5" fill="#0D0D0D"/>
+  
+  <!-- 3D Letters: R A Y L I N K -->
+  <g font-family="Georgia, serif" font-weight="bold" font-size="80" fill="url(#copper)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.5))">
+    <text x="200" y="480">R</text>
+    <text x="285" y="480">A</text>
+    <text x="370" y="480">Y</text>
+    <text x="455" y="480">L</text>
+    <text x="520" y="480">I</text>
+    <text x="565" y="480">N</text>
+    <text x="650" y="480">K</text>
+  </g>
+  
+  <!-- 3D Effect for letters -->
+  <g font-family="Georgia, serif" font-weight="bold" font-size="80" fill="#A04E31" opacity="0.6">
+    <text x="203" y="483">R</text>
+    <text x="288" y="483">A</text>
+    <text x="373" y="483">Y</text>
+    <text x="458" y="483">L</text>
+    <text x="523" y="483">I</text>
+    <text x="568" y="483">N</text>
+    <text x="653" y="483">K</text>
+  </g>
+  
+  <!-- SELECT AFRICA -->
+  <g font-family="Arial, sans-serif" font-weight="600" font-size="36" fill="#F0EBE3" letter-spacing="4">
+    <text x="200" y="550">SELECT AFRICA</text>
+  </g>
+  
+  <!-- Accent lines -->
+  <line x1="190" y1="490" x2="720" y2="490" stroke="url(#copper)" stroke-width="3" stroke-dasharray="10,5"/>
+  
+  <!-- Glow effect -->
+  <ellipse cx="460" cy="440" rx="300" ry="80" fill="url(#copper)" opacity="0.1"/>
+  
+  <!-- Bottom accent -->
+  <rect x="150" y="650" width="900" height="4" rx="2" fill="url(#copper)" opacity="0.3"/>
+</svg>
